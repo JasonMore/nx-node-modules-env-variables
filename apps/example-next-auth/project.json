@@ -19,7 +19,8 @@
       "executor": "@nrwl/next:server",
       "options": {
         "buildTarget": "example-next-auth:build",
-        "dev": true
+        "dev": true,
+        "hostname": "localhost"
       },
       "configurations": {
         "production": {

@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "example-next-auth": "apps/example-next-auth",
+    "example-next-auth-e2e": "apps/example-next-auth-e2e"
+  }
+}

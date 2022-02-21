@@ -1,0 +1,28 @@
+{
+  "root": "apps/example-next-auth-e2e",
+  "sourceRoot": "apps/example-next-auth-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/example-next-auth-e2e/cypress.json",
+        "devServerTarget": "example-next-auth:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "example-next-auth:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/example-next-auth-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["example-next-auth"]
+}
